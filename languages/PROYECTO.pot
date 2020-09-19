@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: PROYECTO Theme\n"
+"Project-Id-Version: usaveganmag Theme\n"
 "POT-Creation-Date: 2020-08-18 00:40-0400\n"
 "PO-Revision-Date: 2020-08-18 00:39-0400\n"
 "Last-Translator: Robert Ochoa <ochoa.robert1@gmail.com>\n"
@@ -687,19 +687,19 @@ msgid "Buscar por Términos:"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "PROYECTO Theme"
+msgid "usaveganmag Theme"
 msgstr ""
 
 #. Theme URI of the plugin/theme
 msgid ""
-"http://www.robertochoa.com.ve/casos/PROYECTO?"
-"utm_source=theme&utm_medium=link&utm_content=PROYECTO"
+"http://www.robertochoa.com.ve/casos/usaveganmag?"
+"utm_source=theme&utm_medium=link&utm_content=usaveganmag"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
 "Tema diseñado por <a href=\"http://www.robertochoa.com.ve/\">Robert Ochoa</"
-"a> para PROYECTO<br /> Este tema custom fue construido en su totalidad, "
+"a> para usaveganmag<br /> Este tema custom fue construido en su totalidad, "
 "pasando por su etapa de Wireframing, rearmado, version anterior e "
 "implementación en hosting externo."
 msgstr ""
@@ -711,5 +711,5 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid ""
 "http://www.robertochoa.com.ve/?"
-"utm_source=theme&utm_medium=link&utm_content=PROYECTO"
+"utm_source=theme&utm_medium=link&utm_content=usaveganmag"
 msgstr ""

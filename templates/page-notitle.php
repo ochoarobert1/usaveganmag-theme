@@ -2,8 +2,8 @@
 /**
 * Template Name: Pagina sin Título
 *
-* @package PROYECTO
-* @subpackage PROYECTO-mk01-theme
+* @package usaveganmag
+* @subpackage usaveganmag-mk01-theme
 * @since Mk. 1.0
 */
 ?>

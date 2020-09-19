@@ -10,8 +10,8 @@ require_once('includes/wp_enqueue_styles.php');
     ENQUEUE AND REGISTER JS
 -------------------------------------------------------------- */
 
-if (!is_admin()) add_action('wp_enqueue_scripts', 'PROYECTO_jquery_enqueue');
-function PROYECTO_jquery_enqueue() {
+if (!is_admin()) add_action('wp_enqueue_scripts', 'usaveganmag_jquery_enqueue');
+function usaveganmag_jquery_enqueue() {
     wp_deregister_script('jquery');
     wp_deregister_script('jquery-migrate');
     if ($_SERVER['REMOTE_ADDR'] == '::1') {
@@ -37,8 +37,8 @@ require_once('includes/wp_enqueue_scripts.php');
     ADD CUSTOM WALKER BOOTSTRAP
 -------------------------------------------------------------- */
 
-add_action( 'after_setup_theme', 'PROYECTO_register_navwalker' );
-function PROYECTO_register_navwalker(){
+add_action( 'after_setup_theme', 'usaveganmag_register_navwalker' );
+function usaveganmag_register_navwalker(){
     require_once('includes/class-wp-bootstrap-navwalker.php');
 }
 
@@ -74,20 +74,20 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 -------------------------------------------------------------- */
 
 register_nav_menus( array(
-    'header_menu' => __( 'Menu Header - Principal', 'PROYECTO' )
+    'header_menu' => __( 'Menu Header - Principal', 'usaveganmag' )
 ) );
 
 /* --------------------------------------------------------------
     ADD DYNAMIC SIDEBAR SUPPORT
 -------------------------------------------------------------- */
 
-add_action( 'widgets_init', 'PROYECTO_widgets_init' );
+add_action( 'widgets_init', 'usaveganmag_widgets_init' );
 
-function PROYECTO_widgets_init() {
+function usaveganmag_widgets_init() {
     register_sidebar( array(
-        'name' => __( 'Sidebar Principal', 'PROYECTO' ),
+        'name' => __( 'Sidebar Principal', 'usaveganmag' ),
         'id' => 'main_sidebar',
-        'description' => __( 'Estos widgets seran vistos en las entradas y páginas del sitio', 'PROYECTO' ),
+        'description' => __( 'Estos widgets seran vistos en las entradas y páginas del sitio', 'usaveganmag' ),
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget'  => '</li>',
         'before_title'  => '<h2 class="widgettitle">',
@@ -95,9 +95,9 @@ function PROYECTO_widgets_init() {
     ) );
 
     register_sidebars( 4, array(
-        'name'          => __('Pie de Página %d', 'PROYECTO'),
+        'name'          => __('Pie de Página %d', 'usaveganmag'),
         'id'            => 'sidebar_footer',
-        'description'   => __('Estos widgets seran vistos en el pie de página del sitio', 'PROYECTO'),
+        'description'   => __('Estos widgets seran vistos en el pie de página del sitio', 'usaveganmag'),
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget'  => '</li>',
         'before_title'  => '<h2 class="widgettitle">',
@@ -105,9 +105,9 @@ function PROYECTO_widgets_init() {
     ) );
 
     //    register_sidebar( array(
-    //        'name' => __( 'Sidebar de la Tienda', 'PROYECTO' ),
+    //        'name' => __( 'Sidebar de la Tienda', 'usaveganmag' ),
     //        'id' => 'shop_sidebar',
-    //        'description' => __( 'Estos widgets seran vistos en Tienda y Categorias de Producto', 'PROYECTO' ),
+    //        'description' => __( 'Estos widgets seran vistos en Tienda y Categorias de Producto', 'usaveganmag' ),
     //        'before_widget' => '<li id='%1$s' class='widget %2$s'>',
     //        'after_widget'  => '</li>',
     //        'before_title'  => '<h2 class='widgettitle'>',

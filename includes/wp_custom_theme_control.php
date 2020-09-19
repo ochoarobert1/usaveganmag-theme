@@ -3,48 +3,48 @@
 WP CUSTOMIZE SECTION - CUSTOM SETTINGS
 -------------------------------------------------------------- */
 
-add_action( 'customize_register', 'PROYECTO_customize_register' );
+add_action( 'customize_register', 'usaveganmag_customize_register' );
 
-function PROYECTO_customize_register( $wp_customize ) {
+function usaveganmag_customize_register( $wp_customize ) {
 
     /* SOCIAL SETTINGS */
-    $wp_customize->add_section('PREFIJO_social_settings', array(
-        'title'    => __('Redes Sociales', 'PROYECTO'),
-        'description' => __('Agregue aqui las redes sociales de la página, serán usadas globalmente', 'PROYECTO'),
+    $wp_customize->add_section('uvm_social_settings', array(
+        'title'    => __('Redes Sociales', 'usaveganmag'),
+        'description' => __('Agregue aqui las redes sociales de la página, serán usadas globalmente', 'usaveganmag'),
         'priority' => 175,
     ));
 
-    $wp_customize->add_setting('PREFIJO_social_settings[facebook]', array(
+    $wp_customize->add_setting('uvm_social_settings[facebook]', array(
         'default'           => '',
-        'sanitize_callback' => 'PROYECTO_sanitize_url',
+        'sanitize_callback' => 'usaveganmag_sanitize_url',
         'capability'        => 'edit_theme_options',
         'type'           => 'option',
     ));
 
     $wp_customize->add_control( 'facebook', array(
         'type' => 'url',
-        'section' => 'PREFIJO_social_settings',
-        'settings' => 'PREFIJO_social_settings[facebook]',
-        'label' => __( 'Facebook', 'PROYECTO' ),
+        'section' => 'uvm_social_settings',
+        'settings' => 'uvm_social_settings[facebook]',
+        'label' => __( 'Facebook', 'usaveganmag' ),
     ));
 
-    $wp_customize->add_setting('PREFIJO_social_settings[twitter]', array(
+    $wp_customize->add_setting('uvm_social_settings[twitter]', array(
         'default'           => '',
-        'sanitize_callback' => 'PROYECTO_sanitize_url',
+        'sanitize_callback' => 'usaveganmag_sanitize_url',
         'capability'        => 'edit_theme_options',
         'type'           => 'option',
     ));
 
     $wp_customize->add_control( 'twitter', array(
         'type' => 'url',
-        'section' => 'PREFIJO_social_settings',
-        'settings' => 'PREFIJO_social_settings[twitter]',
-        'label' => __( 'Twitter', 'PROYECTO' ),
+        'section' => 'uvm_social_settings',
+        'settings' => 'uvm_social_settings[twitter]',
+        'label' => __( 'Twitter', 'usaveganmag' ),
     ));
 
-    $wp_customize->add_setting('PREFIJO_social_settings[instagram]', array(
+    $wp_customize->add_setting('uvm_social_settings[instagram]', array(
         'default'           => '',
-        'sanitize_callback' => 'PROYECTO_sanitize_url',
+        'sanitize_callback' => 'usaveganmag_sanitize_url',
         'capability'        => 'edit_theme_options',
         'type'           => 'option',
 
@@ -52,28 +52,28 @@ function PROYECTO_customize_register( $wp_customize ) {
 
     $wp_customize->add_control( 'instagram', array(
         'type' => 'url',
-        'section' => 'PREFIJO_social_settings',
-        'settings' => 'PREFIJO_social_settings[instagram]',
-        'label' => __( 'Instagram', 'PROYECTO' ),
+        'section' => 'uvm_social_settings',
+        'settings' => 'uvm_social_settings[instagram]',
+        'label' => __( 'Instagram', 'usaveganmag' ),
     ));
 
-    $wp_customize->add_setting('PREFIJO_social_settings[linkedin]', array(
+    $wp_customize->add_setting('uvm_social_settings[linkedin]', array(
         'default'           => '',
-        'sanitize_callback' => 'PROYECTO_sanitize_url',
+        'sanitize_callback' => 'usaveganmag_sanitize_url',
         'capability'        => 'edit_theme_options',
         'type'           => 'option',
     ));
 
     $wp_customize->add_control( 'linkedin', array(
         'type' => 'url',
-        'section' => 'PREFIJO_social_settings',
-        'settings' => 'PREFIJO_social_settings[linkedin]',
-        'label' => __( 'LinkedIn', 'PROYECTO' ),
+        'section' => 'uvm_social_settings',
+        'settings' => 'uvm_social_settings[linkedin]',
+        'label' => __( 'LinkedIn', 'usaveganmag' ),
     ));
 
-    $wp_customize->add_setting('PREFIJO_social_settings[youtube]', array(
+    $wp_customize->add_setting('uvm_social_settings[youtube]', array(
         'default'           => '',
-        'sanitize_callback' => 'PROYECTO_sanitize_url',
+        'sanitize_callback' => 'usaveganmag_sanitize_url',
         'capability'        => 'edit_theme_options',
         'type'           => 'option',
 
@@ -81,19 +81,19 @@ function PROYECTO_customize_register( $wp_customize ) {
 
     $wp_customize->add_control( 'youtube', array(
         'type' => 'url',
-        'section' => 'PREFIJO_social_settings',
-        'settings' => 'PREFIJO_social_settings[youtube]',
-        'label' => __( 'YouTube', 'PROYECTO' ),
+        'section' => 'uvm_social_settings',
+        'settings' => 'uvm_social_settings[youtube]',
+        'label' => __( 'YouTube', 'usaveganmag' ),
     ) );
 
     /* COOKIES SETTINGS */
-    $wp_customize->add_section('PREFIJO_cookie_settings', array(
-        'title'    => __('Cookies', 'PROYECTO'),
-        'description' => __('Opciones de Cookies', 'PROYECTO'),
+    $wp_customize->add_section('uvm_cookie_settings', array(
+        'title'    => __('Cookies', 'usaveganmag'),
+        'description' => __('Opciones de Cookies', 'usaveganmag'),
         'priority' => 176,
     ));
 
-    $wp_customize->add_setting('PREFIJO_cookie_settings[cookie_text]', array(
+    $wp_customize->add_setting('uvm_cookie_settings[cookie_text]', array(
         'default'           => '',
         'sanitize_callback' => 'sanitize_text_field',
         'capability'        => 'edit_theme_options',
@@ -103,13 +103,13 @@ function PROYECTO_customize_register( $wp_customize ) {
 
     $wp_customize->add_control( 'cookie_text', array(
         'type' => 'textarea',
-        'label'    => __('Cookie consent', 'PROYECTO'),
+        'label'    => __('Cookie consent', 'usaveganmag'),
         'description' => __( 'Texto del Cookie consent.' ),
-        'section'  => 'PREFIJO_cookie_settings',
-        'settings' => 'PREFIJO_cookie_settings[cookie_text]'
+        'section'  => 'uvm_cookie_settings',
+        'settings' => 'uvm_cookie_settings[cookie_text]'
     ));
 
-    $wp_customize->add_setting('PREFIJO_cookie_settings[cookie_link]', array(
+    $wp_customize->add_setting('uvm_cookie_settings[cookie_link]', array(
         'default'           => '',
         'sanitize_callback' => 'absint',
         'capability'        => 'edit_theme_options',
@@ -119,14 +119,14 @@ function PROYECTO_customize_register( $wp_customize ) {
 
     $wp_customize->add_control( 'cookie_link', array(
         'type'     => 'dropdown-pages',
-        'section' => 'PREFIJO_cookie_settings',
-        'settings' => 'PREFIJO_cookie_settings[cookie_link]',
-        'label' => __( 'Link de Cookies', 'PROYECTO' ),
+        'section' => 'uvm_cookie_settings',
+        'settings' => 'uvm_cookie_settings[cookie_link]',
+        'label' => __( 'Link de Cookies', 'usaveganmag' ),
     ) );
 
 }
 
-function PROYECTO_sanitize_url( $url ) {
+function usaveganmag_sanitize_url( $url ) {
     return esc_url_raw( $url );
 }
 
@@ -134,41 +134,41 @@ function PROYECTO_sanitize_url( $url ) {
 CUSTOM CONTROL PANEL
 -------------------------------------------------------------- */
 /*
-function register_PROYECTO_settings() {
-    register_setting( 'PROYECTO-settings-group', 'monday_start' );
-    register_setting( 'PROYECTO-settings-group', 'monday_end' );
-    register_setting( 'PROYECTO-settings-group', 'monday_all' );
+function register_usaveganmag_settings() {
+    register_setting( 'usaveganmag-settings-group', 'monday_start' );
+    register_setting( 'usaveganmag-settings-group', 'monday_end' );
+    register_setting( 'usaveganmag-settings-group', 'monday_all' );
 }
 
-add_action('admin_menu', 'PROYECTO_custom_panel_control');
+add_action('admin_menu', 'usaveganmag_custom_panel_control');
 
-function PROYECTO_custom_panel_control() {
+function usaveganmag_custom_panel_control() {
     add_menu_page(
-        __( 'Panel de Control', 'PROYECTO' ),
-        __( 'Panel de Control','PROYECTO' ),
+        __( 'Panel de Control', 'usaveganmag' ),
+        __( 'Panel de Control','usaveganmag' ),
         'manage_options',
-        'PROYECTO-control-panel',
-        'PROYECTO_control_panel_callback',
+        'usaveganmag-control-panel',
+        'usaveganmag_control_panel_callback',
         'dashicons-admin-generic',
         120
     );
-    add_action( 'admin_init', 'register_PROYECTO_settings' );
+    add_action( 'admin_init', 'register_usaveganmag_settings' );
 }
 
-function PROYECTO_control_panel_callback() {
+function usaveganmag_control_panel_callback() {
     ob_start();
 ?>
-<div class="PROYECTO-admin-header-container">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="PROYECTO" />
+<div class="usaveganmag-admin-header-container">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="usaveganmag" />
     <h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
 </div>
-<form method="post" action="options.php" class="PROYECTO-admin-content-container">
-    <?php settings_fields( 'PROYECTO-settings-group' ); ?>
-    <?php do_settings_sections( 'PROYECTO-settings-group' ); ?>
-    <div class="PROYECTO-admin-content-item">
+<form method="post" action="options.php" class="usaveganmag-admin-content-container">
+    <?php settings_fields( 'usaveganmag-settings-group' ); ?>
+    <?php do_settings_sections( 'usaveganmag-settings-group' ); ?>
+    <div class="usaveganmag-admin-content-item">
         <table class="form-table">
             <tr valign="center">
-                <th scope="row"><?php _e('Monday', 'PROYECTO'); ?></th>
+                <th scope="row"><?php _e('Monday', 'usaveganmag'); ?></th>
                 <td>
                     <label for="monday_start">Starting Hour: <input type="time" name="monday_start" value="<?php echo esc_attr( get_option('monday_start') ); ?>"></label>
                     <label for="monday_end">Ending Hour: <input type="time" name="monday_end" value="<?php echo esc_attr( get_option('monday_end') ); ?>"></label>
@@ -177,7 +177,7 @@ function PROYECTO_control_panel_callback() {
             </tr>
         </table>
     </div>
-    <div class="PROYECTO-admin-content-submit">
+    <div class="usaveganmag-admin-content-submit">
         <?php submit_button(); ?>
     </div>
 </form>

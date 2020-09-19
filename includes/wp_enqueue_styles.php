@@ -1,5 +1,5 @@
 <?php
-function proyecto_load_css() {
+function usaveganmag_load_css() {
     $version_remove = NULL;
     if (!is_admin()){
         if ($_SERVER['REMOTE_ADDR'] == '::1') {
@@ -73,17 +73,17 @@ function proyecto_load_css() {
         wp_enqueue_style('google-fonts');
 
         /*- MAIN STYLE -*/
-        wp_register_style('main-style', get_template_directory_uri() . '/css/proyecto-style.css', false, $version_remove, 'all');
+        wp_register_style('main-style', get_template_directory_uri() . '/css/usaveganmag-style.css', false, $version_remove, 'all');
         wp_enqueue_style('main-style');
 
         /*- WOOCOMMERCE OVERRIDES -*/
         if ( class_exists( 'WooCommerce' ) ) {
-            wp_register_style('main-woocommerce-style', get_template_directory_uri() . '/css/proyecto-woocommerce.css', false, $version_remove, 'all');
+            wp_register_style('main-woocommerce-style', get_template_directory_uri() . '/css/usaveganmag-woocommerce.css', false, $version_remove, 'all');
             wp_enqueue_style('main-woocommerce-style');
         }
 
         /*- MAIN MEDIAQUERIES -*/
-        wp_register_style('main-mediaqueries', get_template_directory_uri() . '/css/proyecto-mediaqueries.css', array('main-style'), $version_remove, 'all');
+        wp_register_style('main-mediaqueries', get_template_directory_uri() . '/css/usaveganmag-mediaqueries.css', array('main-style'), $version_remove, 'all');
         wp_enqueue_style('main-mediaqueries');
 
         /*- WORDPRESS STYLE -*/
@@ -92,4 +92,4 @@ function proyecto_load_css() {
     }
 }
 
-add_action('wp_enqueue_scripts', 'proyecto_load_css');
+add_action('wp_enqueue_scripts', 'usaveganmag_load_css');

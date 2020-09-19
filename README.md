@@ -1,12 +1,12 @@
 ![alt tag](images/repo-logo.jpg)
 
-# PROYECTO - Wordpress Custom Theme #
+# USA Vegan Magazine - Wordpress Custom Theme #
 
 * Version: 1.0.0
-* Design: [Robert Ochoa](http://www.robertochoa.com.ve/?utm_source=github_link&utm_medium=link&utm_content=PROYECTO)
-* Development: [Robert Ochoa](http://www.robertochoa.com.ve/?utm_source=github_link&utm_medium=link&utm_content=PROYECTO)
+* Design: [Robert Ochoa](http://www.robertochoa.com.ve/?utm_source=github_link&utm_medium=link&utm_content=usaveganmag)
+* Development: [Robert Ochoa](http://www.robertochoa.com.ve/?utm_source=github_link&utm_medium=link&utm_content=usaveganmag)
 
-Tema diseñado por [Robert Ochoa](http://www.robertochoa.com.ve/?utm_source=github_link&utm_medium=link&utm_content=PROYECTO) para PROYECTO.
+Tema diseñado por [Robert Ochoa](http://www.robertochoa.com.ve/?utm_source=github_link&utm_medium=link&utm_content=usaveganmag) para USA Vegan Magazine.
 Este tema custom fue construido en su totalidad, pasando por su etapa de Wireframing, rearmado, version anterior e implementación en hosting externo.
 
 ### Componentes Principales ###
@@ -37,6 +37,6 @@ Este tema custom fue construido en su totalidad, pasando por su etapa de Wirefra
 
 Soporte Oficial para este tema:
 
-Repo Owner: [Robert Ochoa](http://www.robertochoa.com.ve/?utm_source=github_link&utm_medium=link&utm_content=PROYECTO)
+Repo Owner: [Robert Ochoa](http://www.robertochoa.com.ve/?utm_source=github_link&utm_medium=link&utm_content=usaveganmag)
 
-Main Developer: [Robert Ochoa](http://www.robertochoa.com.ve/?utm_source=github_link&utm_medium=link&utm_content=PROYECTO)
+Main Developer: [Robert Ochoa](http://www.robertochoa.com.ve/?utm_source=github_link&utm_medium=link&utm_content=usaveganmag)

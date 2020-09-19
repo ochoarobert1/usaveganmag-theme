@@ -3,7 +3,7 @@
 /* --------------------------------------------------------------
     ADD THEME SUPPORT
 -------------------------------------------------------------- */
-load_theme_textdomain( 'PROYECTO', get_template_directory() . '/languages' );
+load_theme_textdomain( 'usaveganmag', get_template_directory() . '/languages' );
 add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio' ));
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );
@@ -40,27 +40,27 @@ add_filter('widget_text', 'do_shortcode');
     SECURITY ISSUES
 -------------------------------------------------------------- */
 /* REMOVE WORDPRESS VERSION */
-function PROYECTO_remove_version() {
+function usaveganmag_remove_version() {
     return '';
 }
-add_filter('the_generator', 'PROYECTO_remove_version');
+add_filter('the_generator', 'usaveganmag_remove_version');
 
 /* CHANGE WORDPRESS ERROR ON LOGIN */
-function PROYECTO_wordpress_errors(){
-    return __('Valores Incorrectos, intente de nuevo', 'PROYECTO');
+function usaveganmag_wordpress_errors(){
+    return __('Valores Incorrectos, intente de nuevo', 'usaveganmag');
 }
-add_filter( 'login_errors', 'PROYECTO_wordpress_errors' );
+add_filter( 'login_errors', 'usaveganmag_wordpress_errors' );
 
 /* DISABLE WORDPRESS RSS FEEDS */
-function PROYECTO_disable_feed() {
-    wp_die( __('No hay RSS Feeds disponibles', 'PROYECTO') );
+function usaveganmag_disable_feed() {
+    wp_die( __('No hay RSS Feeds disponibles', 'usaveganmag') );
 }
 
-add_action('do_feed', 'PROYECTO_disable_feed', 1);
-add_action('do_feed_rdf', 'PROYECTO_disable_feed', 1);
-add_action('do_feed_rss', 'PROYECTO_disable_feed', 1);
-add_action('do_feed_rss2', 'PROYECTO_disable_feed', 1);
-add_action('do_feed_atom', 'PROYECTO_disable_feed', 1);
+add_action('do_feed', 'usaveganmag_disable_feed', 1);
+add_action('do_feed_rdf', 'usaveganmag_disable_feed', 1);
+add_action('do_feed_rss', 'usaveganmag_disable_feed', 1);
+add_action('do_feed_rss2', 'usaveganmag_disable_feed', 1);
+add_action('do_feed_atom', 'usaveganmag_disable_feed', 1);
 
 /* --------------------------------------------------------------
     IMAGES RESPONSIVE ON ATTACHMENT IMAGES
@@ -104,7 +104,7 @@ add_action('admin_init', 'custom_admin_styles');
     CUSTOM ADMIN LOGO
 -------------------------------------------------------------- */
 
-function PROYECTO_custom_logo() {
+function usaveganmag_custom_logo() {
     ob_start();
 ?>
 <style type="text/css">
@@ -125,7 +125,7 @@ function PROYECTO_custom_logo() {
     echo $content;
 }
 
-add_action('wp_before_admin_bar_render', 'PROYECTO_custom_logo');
+add_action('wp_before_admin_bar_render', 'usaveganmag_custom_logo');
 
 
 /* --------------------------------------------------------------
@@ -133,9 +133,9 @@ add_action('wp_before_admin_bar_render', 'PROYECTO_custom_logo');
 -------------------------------------------------------------- */
 function dashboard_footer() {
     echo '<span id="footer-thankyou">';
-    _e ('Gracias por crear con ', 'PROYECTO' );
+    _e ('Gracias por crear con ', 'usaveganmag' );
     echo '<a href="http://wordpress.org/" target="_blank">WordPress.</a> - ';
-    _e ('Tema desarrollado por ', 'PROYECTO' );
-    echo '<a href="http://robertochoa.com.ve/?utm_source=footer_admin&utm_medium=link&utm_content=PROYECTO" target="_blank">Robert Ochoa</a></span>';
+    _e ('Tema desarrollado por ', 'usaveganmag' );
+    echo '<a href="http://robertochoa.com.ve/?utm_source=footer_admin&utm_medium=link&utm_content=usaveganmag" target="_blank">Robert Ochoa</a></span>';
 }
 add_filter('admin_footer_text', 'dashboard_footer');
